@@ -1,0 +1,129 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfg1bbfhux0ol"]
+
+[ext_resource type="PackedScene" uid="uid://ch76dymao0rkr" path="res://prefabs/platform.tscn" id="1_fdnxn"]
+[ext_resource type="PackedScene" uid="uid://cj1dm24prey8t" path="res://prefabs/player.tscn" id="2_rxlmi"]
+[ext_resource type="PackedScene" uid="uid://tpln3brreemj" path="res://prefabs/next.tscn" id="3_rnm0m"]
+[ext_resource type="Texture2D" uid="uid://baebpt0qfhsal" path="res://graphics/bg.png" id="4_wikkk"]
+[ext_resource type="PackedScene" uid="uid://cnss4mclltbsy" path="res://prefabs/virus.tscn" id="6_v5j0f"]
+[ext_resource type="PackedScene" uid="uid://dhxe0eqca38aj" path="res://prefabs/spike.tscn" id="6_vppxp"]
+[ext_resource type="PackedScene" uid="uid://dgpyiggjdky1h" path="res://prefabs/antivirus.tscn" id="7_0jx2a"]
+
+[node name="Node2D" type="Node2D"]
+process_mode = 1
+position = Vector2(0, -1)
+
+[node name="player" parent="." instance=ExtResource("2_rxlmi")]
+position = Vector2(69, 285)
+scale = Vector2(1, 0.988415)
+nextLevel = "a1.tscn"
+thisLevel = "a4.tscn"
+
+[node name="next" parent="." instance=ExtResource("3_rnm0m")]
+position = Vector2(-6, 13)
+
+[node name="bg" type="Sprite2D" parent="."]
+z_index = -5
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(643, 407)
+rotation = -3.14159
+scale = Vector2(80.1395, -24.151)
+texture = ExtResource("4_wikkk")
+region_rect = Rect2(0.589722, 0.442902, 60.5001, 61.6)
+
+[node name="level" type="Node2D" parent="."]
+
+[node name="platform2" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(53, 537)
+scale = Vector2(3.58844, 11.6661)
+
+[node name="platform5" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(-57, 176)
+scale = Vector2(3.58844, 11.6661)
+
+[node name="platform9" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(1252, 261)
+scale = Vector2(3.58844, 11.6661)
+
+[node name="platform3" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(604, 769)
+scale = Vector2(17.4812, 2.92298)
+
+[node name="platform" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(163, 769)
+scale = Vector2(10.6812, 2.92298)
+
+[node name="platform10" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(285, 394)
+scale = Vector2(10.9212, 1.60298)
+
+[node name="platform15" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(1169, 474)
+scale = Vector2(2.8412, 1.60298)
+
+[node name="platform16" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(755, 526)
+scale = Vector2(23.4012, 1.60298)
+
+[node name="platform14" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(878, 394)
+scale = Vector2(9.6012, 1.60298)
+
+[node name="platform12" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(580, 343)
+scale = Vector2(9.6012, 1.60298)
+
+[node name="platform11" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(449, 272)
+scale = Vector2(1.4812, 2.84298)
+
+[node name="platform13" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(711, 271)
+scale = Vector2(1.4812, 2.84298)
+
+[node name="platform4" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(1078, 769)
+scale = Vector2(12.8412, 2.92298)
+
+[node name="platform6" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(629, 28)
+scale = Vector2(17.4812, 2.92298)
+
+[node name="platform7" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(177, 28)
+scale = Vector2(11.0812, 2.92298)
+
+[node name="platform8" parent="level" instance=ExtResource("1_fdnxn")]
+position = Vector2(1103, 28)
+scale = Vector2(12.8412, 2.92298)
+
+[node name="spike" parent="." instance=ExtResource("6_vppxp")]
+position = Vector2(615, 692)
+
+[node name="spike2" parent="." instance=ExtResource("6_vppxp")]
+position = Vector2(676, 692)
+
+[node name="spike3" parent="." instance=ExtResource("6_vppxp")]
+position = Vector2(734, 692)
+
+[node name="spike4" parent="." instance=ExtResource("6_vppxp")]
+position = Vector2(424, 690)
+
+[node name="spike5" parent="." instance=ExtResource("6_vppxp")]
+position = Vector2(1044, 690)
+
+[node name="spike6" parent="." instance=ExtResource("6_vppxp")]
+position = Vector2(505, 286)
+
+[node name="spike7" parent="." instance=ExtResource("6_vppxp")]
+position = Vector2(581, 286)
+
+[node name="spike8" parent="." instance=ExtResource("6_vppxp")]
+position = Vector2(655, 286)
+
+[node name="virus" parent="." instance=ExtResource("6_v5j0f")]
+position = Vector2(1050, 272)
+
+[node name="antivirus" parent="." node_paths=PackedStringArray("body") instance=ExtResource("7_0jx2a")]
+position = Vector2(422, 551)
+body = NodePath("../player")

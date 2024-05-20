@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=3 uid="uid://b83s1hubuv1tt"]
+
+[ext_resource type="PackedScene" uid="uid://ch76dymao0rkr" path="res://prefabs/platform.tscn" id="1_0fu7h"]
+[ext_resource type="Texture2D" uid="uid://baebpt0qfhsal" path="res://graphics/bg.png" id="2_bd0hk"]
+[ext_resource type="FontFile" uid="uid://bjg0pw2gwn2t1" path="res://graphics/Minecraft.ttf" id="5_6boae"]
+[ext_resource type="PackedScene" uid="uid://cj1dm24prey8t" path="res://prefabs/player.tscn" id="6_6p5x7"]
+[ext_resource type="PackedScene" uid="uid://tpln3brreemj" path="res://prefabs/next.tscn" id="7_dtuwf"]
+
+[node name="Node2D" type="Node2D"]
+process_mode = 1
+position = Vector2(0, -1)
+
+[node name="platform5" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(32, 381)
+scale = Vector2(2.60121, 12.443)
+
+[node name="platform16" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(-20, 745)
+scale = Vector2(2.60121, 12.443)
+
+[node name="platform17" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(1187, 623)
+scale = Vector2(2.60121, 6.203)
+
+[node name="platform11" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(2627, 538)
+scale = Vector2(2.60121, 12.203)
+
+[node name="platform6" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(32, -84.0001)
+scale = Vector2(2.60121, 17.323)
+
+[node name="platform" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(163, 769)
+scale = Vector2(10.6812, 2.92298)
+
+[node name="platform2" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(496, 769)
+scale = Vector2(10.6812, 2.92298)
+
+[node name="platform3" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(831, 769)
+scale = Vector2(10.6812, 2.92298)
+
+[node name="platform4" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(1163, 769)
+scale = Vector2(10.6812, 2.92298)
+
+[node name="platform7" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(1499, 769)
+scale = Vector2(10.6812, 2.92298)
+
+[node name="platform8" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(1832, 769)
+scale = Vector2(10.6812, 2.92298)
+
+[node name="platform12" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(1305, 505)
+scale = Vector2(9.99186, 1.57892)
+
+[node name="platform13" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(2323, 503)
+scale = Vector2(3.27186, 1.63951)
+
+[node name="platform9" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(2167, 769)
+scale = Vector2(10.6812, 2.92298)
+
+[node name="platform10" parent="." instance=ExtResource("1_0fu7h")]
+position = Vector2(2499, 769)
+scale = Vector2(10.6812, 2.92298)
+
+[node name="player" parent="." instance=ExtResource("6_6p5x7")]
+position = Vector2(155, 643)
+scale = Vector2(1, 0.988415)
+nextLevel = "a3.tscn"
+thisLevel = "a2.tscn"
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+limit_left = 25
+limit_top = 0
+limit_right = 2606
+limit_bottom = 769
+position_smoothing_enabled = true
+
+[node name="next" parent="." instance=ExtResource("7_dtuwf")]
+position = Vector2(1386, -63)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -5
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(643, 407)
+rotation = -3.14159
+scale = Vector2(80.1395, -24.151)
+texture = ExtResource("2_bd0hk")
+region_rect = Rect2(0.589722, 0.442902, 60.5001, 61.6)
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+texture_filter = 1
+offset_left = 763.0
+offset_top = 228.0
+offset_right = 873.0
+offset_bottom = 320.0
+scale = Vector2(2.57284, 2.21869)
+theme_override_fonts/normal_font = ExtResource("5_6boae")
+text = "Press Jump Twice!"
+fit_content = true
+autowrap_mode = 0

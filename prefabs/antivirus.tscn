@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgpyiggjdky1h"]
+
+[ext_resource type="Texture2D" uid="uid://435dlcsubiuc" path="res://graphics/antivirus.png" id="1_niogs"]
+[ext_resource type="Script" path="res://prefabs/follow.gd" id="2_g67kh"]
+
+[node name="antivirus" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_g67kh")
+offset = Vector2(-3, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.419608)
+texture_filter = 1
+position = Vector2(5.96046e-08, -228)
+scale = Vector2(5, 5)
+texture = ExtResource("1_niogs")

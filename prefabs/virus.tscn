@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnss4mclltbsy"]
+
+[ext_resource type="Script" path="res://prefabs/virus.gd" id="1_sfjbv"]
+[ext_resource type="Texture2D" uid="uid://ci4w52mlkxb1a" path="res://graphics/virus.png" id="1_ybc71"]
+
+[node name="virus" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_sfjbv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.435294)
+z_index = 1
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("1_ybc71")

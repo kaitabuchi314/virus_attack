@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhxe0eqca38aj"]
+
+[ext_resource type="Texture2D" uid="uid://ty30uutneoh4" path="res://graphics/spike.png" id="1_3h4nf"]
+
+[node name="spike" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_3h4nf")
+
+[node name="spike" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1, -31, -32, 32, 32, 32)
