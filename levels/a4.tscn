@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://ch76dymao0rkr" path="res://prefabs/platform.tscn" id="1_fdnxn"]
 [ext_resource type="PackedScene" uid="uid://cj1dm24prey8t" path="res://prefabs/player.tscn" id="2_rxlmi"]
 [ext_resource type="PackedScene" uid="uid://tpln3brreemj" path="res://prefabs/next.tscn" id="3_rnm0m"]
-[ext_resource type="Texture2D" uid="uid://baebpt0qfhsal" path="res://graphics/bg.png" id="4_wikkk"]
 [ext_resource type="PackedScene" uid="uid://cnss4mclltbsy" path="res://prefabs/virus.tscn" id="6_v5j0f"]
 [ext_resource type="PackedScene" uid="uid://dhxe0eqca38aj" path="res://prefabs/spike.tscn" id="6_vppxp"]
 [ext_resource type="PackedScene" uid="uid://dgpyiggjdky1h" path="res://prefabs/antivirus.tscn" id="7_0jx2a"]
+[ext_resource type="Texture2D" uid="uid://bsvf5g57h7dwb" path="res://prefabs/595FAD8C-E33F-4E12-A974-9B2D043A2BA3.png.eac9bd8cac80378692e4115553790af8.png" id="7_7glq2"]
 
 [node name="Node2D" type="Node2D"]
 process_mode = 1
@@ -20,16 +20,6 @@ thisLevel = "a4.tscn"
 
 [node name="next" parent="." instance=ExtResource("3_rnm0m")]
 position = Vector2(-6, 13)
-
-[node name="bg" type="Sprite2D" parent="."]
-z_index = -5
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(643, 407)
-rotation = -3.14159
-scale = Vector2(80.1395, -24.151)
-texture = ExtResource("4_wikkk")
-region_rect = Rect2(0.589722, 0.442902, 60.5001, 61.6)
 
 [node name="level" type="Node2D" parent="."]
 
@@ -127,3 +117,9 @@ position = Vector2(1050, 272)
 [node name="antivirus" parent="." node_paths=PackedStringArray("body") instance=ExtResource("7_0jx2a")]
 position = Vector2(422, 551)
 body = NodePath("../player")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(582, 380)
+scale = Vector2(0.387003, 0.472442)
+texture = ExtResource("7_7glq2")

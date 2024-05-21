@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgpyiggjdky1h"]
+[gd_scene load_steps=4 format=3 uid="uid://dgpyiggjdky1h"]
 
 [ext_resource type="Texture2D" uid="uid://435dlcsubiuc" path="res://graphics/antivirus.png" id="1_niogs"]
 [ext_resource type="Script" path="res://prefabs/follow.gd" id="2_g67kh"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jrs26"]
+polygon = PackedVector2Array(-78, -334, -76, -386, 52, -384, 80, -356, 80, -68, -80, -68)
 
 [node name="antivirus" type="Node2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("2_g67kh")
 offset = Vector2(-3, 1)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_jrs26")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.419608)

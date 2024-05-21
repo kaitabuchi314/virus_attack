@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://l832atqxie0l"]
+[gd_scene load_steps=7 format=3 uid="uid://l832atqxie0l"]
 
 [ext_resource type="PackedScene" uid="uid://cj1dm24prey8t" path="res://prefabs/player.tscn" id="1_4f0ky"]
 [ext_resource type="PackedScene" uid="uid://ch76dymao0rkr" path="res://prefabs/platform.tscn" id="2_2fr7t"]
-[ext_resource type="Texture2D" uid="uid://baebpt0qfhsal" path="res://graphics/bg.png" id="4_pfocf"]
+[ext_resource type="Texture2D" uid="uid://bsvf5g57h7dwb" path="res://prefabs/595FAD8C-E33F-4E12-A974-9B2D043A2BA3.png.eac9bd8cac80378692e4115553790af8.png" id="3_5y7cc"]
+[ext_resource type="Script" path="res://levels/setpos.gd" id="4_laupt"]
 [ext_resource type="FontFile" uid="uid://bjg0pw2gwn2t1" path="res://graphics/Minecraft.ttf" id="5_xaxt0"]
 [ext_resource type="PackedScene" uid="uid://tpln3brreemj" path="res://prefabs/next.tscn" id="7_tat7b"]
 
@@ -77,24 +78,22 @@ nextLevel = "a2.tscn"
 thisLevel = "a1.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(-4, -4.04688)
 limit_left = 25
 limit_top = 0
 limit_right = 2606
 limit_bottom = 769
 position_smoothing_enabled = true
 
+[node name="Sprite2D2" type="Sprite2D" parent="player/Camera2D" node_paths=PackedStringArray("follow")]
+visible = false
+scale = Vector2(0.36, 0.412)
+texture = ExtResource("3_5y7cc")
+script = ExtResource("4_laupt")
+follow = NodePath("..")
+
 [node name="next" parent="." instance=ExtResource("7_tat7b")]
 position = Vector2(1386, -63)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -5
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(643, 407)
-rotation = -3.14159
-scale = Vector2(80.1395, -24.151)
-texture = ExtResource("4_pfocf")
-region_rect = Rect2(0.589722, 0.442902, 60.5001, 61.6)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 texture_filter = 1
@@ -122,6 +121,7 @@ theme_override_fonts/normal_font = ExtResource("5_xaxt0")
 text = "	Jump:
 		W
 	   Up
+     Space
    Button A"
 fit_content = true
 autowrap_mode = 0
