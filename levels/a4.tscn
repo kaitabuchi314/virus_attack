@@ -24,11 +24,11 @@ position = Vector2(-6, 13)
 [node name="level" type="Node2D" parent="."]
 
 [node name="platform2" parent="level" instance=ExtResource("1_fdnxn")]
-position = Vector2(53, 537)
-scale = Vector2(3.58844, 11.6661)
+position = Vector2(55, 554)
+scale = Vector2(3.58844, 11.7461)
 
 [node name="platform5" parent="level" instance=ExtResource("1_fdnxn")]
-position = Vector2(-57, 176)
+position = Vector2(-55, 174)
 scale = Vector2(3.58844, 11.6661)
 
 [node name="platform9" parent="level" instance=ExtResource("1_fdnxn")]
@@ -68,7 +68,7 @@ position = Vector2(449, 272)
 scale = Vector2(1.4812, 2.84298)
 
 [node name="platform13" parent="level" instance=ExtResource("1_fdnxn")]
-position = Vector2(711, 271)
+position = Vector2(700, 277)
 scale = Vector2(1.4812, 2.84298)
 
 [node name="platform4" parent="level" instance=ExtResource("1_fdnxn")]
